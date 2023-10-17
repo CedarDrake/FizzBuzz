@@ -9,21 +9,20 @@ public class FizzBuzz
 {
     public static void  fizzbuzz() {
         for (int i = 1; i <= 100; i++) {
-            double fizz = ;
-            double buzz = ;
-            double fizzbuzz = ;
-            if (i / 3 == fizz) {
-                System.out.println("Fizz");
+            double ii = i;
+            double fizz = ii/3;
+            double buzz = ii/5;
+            double fizzbuzz = ii/15;
+            if (Math.ceil(fizz) == Math.floor(fizz)) {
+                System.out.print("Fizz");
             }
-            if (i / 5 == buzz) {
-                System.out.println("Buzz");
+            if (Math.ceil(buzz) == Math.floor(buzz)) {
+                System.out.print("Buzz");
             }
-            if (i / 15 == fizzbuzz) {
-                System.out.println("FizzBuzz");
+            if (Math.ceil(fizz) != Math.floor(fizz) && Math.ceil(buzz) != Math.floor(buzz)) {
+                System.out.print(i);
             }
-            if (i / 3 != fizz && i / 5 != buzz && i / 15 != fizzbuzz) {
-                System.out.println(i);
-            }
+            System.out.println("");
         }
     }
 }
